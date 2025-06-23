@@ -30,12 +30,15 @@ document.addEventListener('DOMContentLoaded', function() {
     // Portfolio carousel functionality
     const carouselTrack = document.getElementById('carouselTrack');
     const dots = document.querySelectorAll('.dot');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
     let currentSlide = 0;
     const totalSlides = dots.length;
+    const cardWidth = 33.333; // Each card takes 1/3 of the container
 
     // Function to update carousel
     function updateCarousel(slideIndex) {
-        const translateX = slideIndex * -100;
+        const translateX = slideIndex * -cardWidth;
         carouselTrack.style.transform = `translateX(${translateX}%)`;
         
         // Update active dot
@@ -51,6 +54,17 @@ document.addEventListener('DOMContentLoaded', function() {
         dot.addEventListener('click', function() {
             updateCarousel(index);
         });
+    });
+
+    // Add click events to navigation buttons
+    prevBtn.addEventListener('click', function() {
+        currentSlide = currentSlide > 0 ? currentSlide - 1 : totalSlides - 1;
+        updateCarousel(currentSlide);
+    });
+
+    nextBtn.addEventListener('click', function() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        updateCarousel(currentSlide);
     });
 
     // Auto-play carousel

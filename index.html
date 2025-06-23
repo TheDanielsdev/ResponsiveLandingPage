@@ -87,16 +87,16 @@
             <div class="container">
                 <div class="stats-content">
                     <div class="stat">
-                        <div class="stat-number">100k+</div>
-                        <div class="stat-label">Global Reach</div>
+                        <div class="stat-number">10K+</div>
+                        <div class="stat-label">Completed Projects</div>
                     </div>
                     <div class="stat">
                         <div class="stat-number">100%</div>
                         <div class="stat-label">Client Satisfaction</div>
                     </div>
                     <div class="stat">
-                        <div class="stat-number">100+</div>
-                        <div class="stat-label">Projects Completed</div>
+                        <div class="stat-number">10YRS</div>
+                        <div class="stat-label">Industry Experience</div>
                     </div>
                 </div>
             </div>
@@ -110,25 +110,36 @@
                         <h2>What We Do</h2>
                         <div class="services-list">
                             <div class="service-item">
+                                <div class="service-icon">🌐</div>
                                 <h3>Web Development</h3>
                                 <p>Creating responsive and dynamic websites that deliver exceptional user experiences.</p>
                             </div>
                             <div class="service-item">
+                                <div class="service-icon">📱</div>
                                 <h3>Mobile Apps</h3>
                                 <p>Building native and cross-platform mobile applications for iOS and Android.</p>
                             </div>
                             <div class="service-item">
+                                <div class="service-icon">🎨</div>
                                 <h3>UI/UX Design</h3>
                                 <p>Designing intuitive and beautiful user interfaces that users love to interact with.</p>
                             </div>
                             <div class="service-item">
+                                <div class="service-icon">📊</div>
                                 <h3>Brand Strategy</h3>
                                 <p>Developing comprehensive brand strategies that resonate with your target audience.</p>
                             </div>
                         </div>
                     </div>
                     <div class="image-content">
-                        <img src="img/developer-working.png" alt="Developer working on laptop">
+                        <div class="laptop-container">
+                            <img src="img/developer-working.svg" alt="Developer working on laptop">
+                            <div class="tech-badge badge-1">HTML</div>
+                            <div class="tech-badge badge-2">CSS</div>
+                            <div class="tech-badge badge-3">JS</div>
+                            <div class="tech-badge badge-4">React</div>
+                            <div class="tech-badge badge-5">Node.js</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -141,28 +152,28 @@
                 <div class="solutions-grid">
                     <div class="solution-card">
                         <div class="card-icon">
-                            <img src="img/web-development-icon.png" alt="Web Development">
+                            <img src="img/web-development-icon.svg" alt="Web Development">
                         </div>
                         <h3>Web Development</h3>
                         <p>Custom web development solutions that drive business growth and user engagement.</p>
                     </div>
                     <div class="solution-card">
                         <div class="card-icon">
-                            <img src="img/mobile-app-icon.png" alt="Mobile App Development">
+                            <img src="img/mobile-app-icon.svg" alt="Mobile App Development">
                         </div>
                         <h3>Mobile App Development</h3>
                         <p>Native and hybrid mobile applications that deliver seamless user experiences.</p>
                     </div>
                     <div class="solution-card">
                         <div class="card-icon">
-                            <img src="img/ui-ux-icon.png" alt="UI/UX Design">
+                            <img src="img/ui-ux-icon.svg" alt="UI/UX Design">
                         </div>
                         <h3>UI/UX Design</h3>
                         <p>User-centered design solutions that enhance usability and drive conversions.</p>
                     </div>
                     <div class="solution-card">
                         <div class="card-icon">
-                            <img src="img/digital-marketing-icon.png" alt="Digital Marketing">
+                            <img src="img/digital-marketing-icon.svg" alt="Digital Marketing">
                         </div>
                         <h3>Digital Marketing</h3>
                         <p>Comprehensive digital marketing strategies that boost your online presence.</p>
@@ -180,31 +191,39 @@
                     <button class="btn btn-primary">Explore All</button>
                 </div>
                 <div class="portfolio-carousel">
+                    <button class="carousel-btn prev" id="prevBtn">‹</button>
                     <div class="carousel-container">
                         <div class="carousel-track" id="carouselTrack">
-                            <div class="portfolio-item">
-                                <img src="img/project1.png" alt="Project 1">
-                                <div class="portfolio-overlay">
-                                    <h3>E-commerce Platform</h3>
-                                    <p>Modern online store with advanced features</p>
+                            <div class="portfolio-card">
+                                <div class="card-thumbnail">
+                                    <img src="img/project1.svg" alt="Project 1">
+                                </div>
+                                <div class="card-content">
+                                    <h3>JohnnyDoe</h3>
+                                    <p>E-commerce Platform with advanced features and modern design</p>
                                 </div>
                             </div>
-                            <div class="portfolio-item">
-                                <img src="img/project2.png" alt="Project 2">
-                                <div class="portfolio-overlay">
-                                    <h3>Corporate Website</h3>
-                                    <p>Professional business website with CMS</p>
+                            <div class="portfolio-card">
+                                <div class="card-thumbnail">
+                                    <img src="img/project2.svg" alt="Project 2">
+                                </div>
+                                <div class="card-content">
+                                    <h3>TechCorp</h3>
+                                    <p>Corporate website with professional design and CMS integration</p>
                                 </div>
                             </div>
-                            <div class="portfolio-item">
-                                <img src="img/project3.png" alt="Project 3">
-                                <div class="portfolio-overlay">
-                                    <h3>Mobile Application</h3>
-                                    <p>Cross-platform mobile app solution</p>
+                            <div class="portfolio-card">
+                                <div class="card-thumbnail">
+                                    <img src="img/project3.svg" alt="Project 3">
+                                </div>
+                                <div class="card-content">
+                                    <h3>MobileApp</h3>
+                                    <p>Cross-platform mobile application with native performance</p>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <button class="carousel-btn next" id="nextBtn">›</button>
                     <div class="carousel-dots">
                         <span class="dot active" data-slide="0"></span>
                         <span class="dot" data-slide="1"></span>
@@ -223,9 +242,9 @@
                     <button class="btn btn-primary">Get Started Today</button>
                 </div>
                 <div class="promo-mockups">
-                    <img src="img/desktop-mockup1.png" alt="Desktop Website Mockup" class="mockup desktop-1">
-                    <img src="img/desktop-mockup2.png" alt="Desktop Website Mockup" class="mockup desktop-2">
-                    <img src="img/desktop-mockup3.png" alt="Desktop Website Mockup" class="mockup desktop-3">
+                    <img src="img/desktop-mockup1.svg" alt="Desktop Website Mockup" class="mockup desktop-1">
+                    <img src="img/desktop-mockup2.svg" alt="Desktop Website Mockup" class="mockup desktop-2">
+                    <img src="img/desktop-mockup3.svg" alt="Desktop Website Mockup" class="mockup desktop-3">
                 </div>
             </div>
         </section>

@@ -154,6 +154,10 @@ body {
     color: var(--text-primary);
 }
 
+.text-highlight {
+    color: var(--primary-color);
+}
+
 .hero-text p {
     font-size: 18px;
     color: var(--text-secondary);
@@ -198,50 +202,70 @@ body {
     color: var(--primary-color);
 }
 
-.hero-stats {
+.hero-image {
+    position: relative;
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 20px;
 }
 
-.stat-item {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.stat-avatars {
-    display: flex;
-    gap: -8px;
-}
-
-.avatar {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    border: 2px solid var(--white);
-    margin-left: -8px;
-}
-
-.avatar:first-child {
-    margin-left: 0;
-}
-
-.stat-number {
-    font-size: 18px;
-    font-weight: 700;
-    color: var(--text-primary);
-}
-
-.stat-label {
-    font-size: 14px;
-    color: var(--text-secondary);
+.hero-background-blob {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background-image: url('img/green-blob.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1;
 }
 
 .hero-image img {
-    width: 100%;
+    width: 350px;
     height: auto;
+    position: relative;
+    z-index: 2;
     border-radius: var(--border-radius);
+}
+
+.floating-card {
+    position: absolute;
+    background: var(--white);
+    padding: 12px 16px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    z-index: 3;
+    animation: float 3s ease-in-out infinite;
+}
+
+.floating-card.top-left {
+    top: 20px;
+    left: -20px;
+}
+
+.floating-card.bottom-right {
+    bottom: 30px;
+    right: -30px;
+}
+
+.floating-card .star,
+.floating-card .check {
+    font-size: 18px;
+}
+
+.floating-card .card-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary);
+    white-space: nowrap;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
 }
 
 /* Statistics Bar */
@@ -296,6 +320,17 @@ body {
     gap: 32px;
 }
 
+.service-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.service-icon {
+    font-size: 24px;
+    margin-top: 4px;
+}
+
 .service-item h3 {
     font-size: 20px;
     font-weight: 600;
@@ -308,10 +343,56 @@ body {
     line-height: 1.6;
 }
 
+.laptop-container {
+    position: relative;
+    width: 100%;
+}
+
 .image-content img {
     width: 100%;
     height: auto;
     border-radius: var(--border-radius);
+}
+
+.tech-badge {
+    position: absolute;
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    animation: float 4s ease-in-out infinite;
+}
+
+.badge-1 {
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.badge-2 {
+    top: 15%;
+    right: 15%;
+    animation-delay: 1s;
+}
+
+.badge-3 {
+    top: 60%;
+    left: 5%;
+    animation-delay: 2s;
+}
+
+.badge-4 {
+    bottom: 25%;
+    right: 20%;
+    animation-delay: 3s;
+}
+
+.badge-5 {
+    bottom: 40%;
+    left: 25%;
+    animation-delay: 4s;
 }
 
 /* Solutions Section */
@@ -374,7 +455,8 @@ body {
 /* Portfolio Section */
 .portfolio {
     padding: 100px 0;
-    background: var(--white);
+    background: var(--background-dark);
+    color: var(--white);
 }
 
 .portfolio-header {
@@ -386,12 +468,12 @@ body {
     font-size: 36px;
     font-weight: 700;
     margin-bottom: 16px;
-    color: var(--text-primary);
+    color: var(--white);
 }
 
 .portfolio-header p {
     font-size: 18px;
-    color: var(--text-secondary);
+    color: rgba(255, 255, 255, 0.8);
     margin-bottom: 32px;
     max-width: 600px;
     margin-left: auto;
@@ -400,43 +482,82 @@ body {
 
 .portfolio-carousel {
     position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.carousel-btn {
+    background: var(--white);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 24px;
+    color: var(--text-primary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    z-index: 10;
+}
+
+.carousel-btn:hover {
+    background: var(--primary-color);
+    color: var(--white);
 }
 
 .carousel-container {
+    flex: 1;
     overflow: hidden;
     border-radius: var(--border-radius);
 }
 
 .carousel-track {
     display: flex;
+    gap: 20px;
     transition: transform 0.5s ease;
 }
 
-.portfolio-item {
-    min-width: 100%;
-    position: relative;
+.portfolio-card {
+    min-width: calc(33.333% - 14px);
+    background: var(--white);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    color: var(--text-primary);
 }
 
-.portfolio-item img {
+.card-thumbnail {
+    height: 200px;
+    background: var(--background-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-secondary);
+}
+
+.card-thumbnail img {
     width: 100%;
-    height: 400px;
+    height: 100%;
     object-fit: cover;
 }
 
-.portfolio-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
-    color: var(--white);
-    padding: 40px;
+.card-content {
+    padding: 20px;
 }
 
-.portfolio-overlay h3 {
-    font-size: 24px;
+.card-content h3 {
+    font-size: 18px;
     font-weight: 600;
     margin-bottom: 8px;
+    color: var(--text-primary);
+}
+
+.card-content p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.4;
 }
 
 .carousel-dots {
@@ -450,13 +571,13 @@ body {
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background: var(--border-color);
+    background: rgba(255, 255, 255, 0.3);
     cursor: pointer;
     transition: var(--transition);
 }
 
 .dot.active {
-    background: var(--primary-color);
+    background: var(--white);
 }
 
 /* Final Promo Section */
@@ -550,6 +671,10 @@ body {
         display: flex;
     }
 
+    .hero {
+        padding: 100px 0 60px;
+    }
+
     .hero-content {
         grid-template-columns: 1fr;
         gap: 40px;
@@ -563,11 +688,42 @@ body {
     .hero-buttons {
         flex-direction: column;
         align-items: center;
+        gap: 12px;
     }
 
     .btn {
         width: 100%;
-        max-width: 300px;
+        max-width: 280px;
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+
+    .hero-image {
+        order: -1;
+    }
+
+    .hero-background-blob {
+        width: 300px;
+        height: 300px;
+    }
+
+    .hero-image img {
+        width: 250px;
+    }
+
+    .floating-card {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+
+    .floating-card.top-left {
+        top: 10px;
+        left: 10px;
+    }
+
+    .floating-card.bottom-right {
+        bottom: 20px;
+        right: 10px;
     }
 
     .stats-content {
@@ -575,22 +731,95 @@ body {
         gap: 32px;
     }
 
+    .stats-bar {
+        padding: 40px 0;
+    }
+
+    .what-we-do {
+        padding: 60px 0;
+    }
+
     .section-content {
         grid-template-columns: 1fr;
         gap: 40px;
     }
 
-    .solutions-grid {
-        grid-template-columns: 1fr;
+    .text-content h2 {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+    .services-list {
         gap: 24px;
     }
 
+    .service-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        text-align: left;
+    }
+
+    .tech-badge {
+        display: none;
+    }
+
+    .solutions {
+        padding: 60px 0;
+    }
+
+    .solutions h2 {
+        font-size: 28px;
+        margin-bottom: 40px;
+    }
+
+    .solutions-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
     .solution-card {
-        padding: 24px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .portfolio {
+        padding: 60px 0;
+    }
+
+    .portfolio-header h2 {
+        font-size: 28px;
+    }
+
+    .portfolio-carousel {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .carousel-btn {
+        display: none;
+    }
+
+    .carousel-track {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .portfolio-card {
+        min-width: 100%;
+    }
+
+    .final-promo {
+        padding: 60px 0;
+    }
+
+    .promo-content h2 {
+        font-size: 28px;
     }
 
     .promo-mockups {
         flex-direction: column;
+        gap: 20px;
     }
 
     .mockup {
