@@ -8,7 +8,7 @@
     --secondary-color: #64748b;
     --text-primary: #1e293b;
     --text-secondary: #000000;
-    --background-light: #f8fafc;
+    --background-light: #F9FAFB;
     --background-dark: #1e293b;
     --white: #ffffff;
     --border-color: #e2e8f0;
@@ -37,7 +37,7 @@ html {
 
 }
 .container {
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -168,7 +168,7 @@ html {
 
 /* Hero Section */
 .hero {
-    padding: 220px 0 100px;
+    padding: 170px 0 0px;
     background:white
 }
 
@@ -190,6 +190,14 @@ html {
     color: #183B56;
     position: relative;
 }
+
+.highlight {
+    background-color: #F5CD8A;
+    padding: 2px 6px;
+    display: inline-block;
+    line-height: 1;
+    border-radius: 3px;
+  }
 
 .hero-text h1::after {
     content: '';
@@ -213,7 +221,7 @@ html {
     color: var(--text-secondary);
     margin-bottom: 32px;
     font-weight: 400;
-    line-height: 1.6;
+    line-height: 1.5;
 }
 
 .hero-buttons {
@@ -273,7 +281,7 @@ html {
 }
 
 .hero-image img {
-    width: 400px;
+    width: 500px;
     height: auto;
     
     position: relative;
@@ -294,14 +302,15 @@ html {
     animation: float 3s ease-in-out infinite;
 }
 
+
 .floating-card.top-left {
-    bottom: 60px;
+    bottom: 120px;
     left: -40px;
 }
 
 .floating-card.bottom-right {
     bottom: 60px;
-    right: 10px;
+    right: 100px;
 }
 
 .floating-card .star,
@@ -314,6 +323,72 @@ html {
     font-weight: 600;
     color: var(--text-primary);
     white-space: nowrap;
+}
+.top-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #ddd;
+   
+    background-image: url('img/Ellipse 974.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.stars {
+    display: flex;
+    gap: 2px;
+}
+
+.star {
+    width: 16px;
+    height: 16px;
+    color: #ff9500;
+    font-size: 16px;
+}
+
+.review-text {
+    color: #5A7184;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.label {
+  color: #5A7184;
+  font-size: 14px;
+  margin-bottom: 8px;
+  font-weight: 400;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.number {
+    font-family: 'Manrope', sans-serif;
+  color: #183B56;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.icon {
+  width: 24px;
+  height: 16px;
+}
+
+.icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 @keyframes float {
@@ -647,7 +722,7 @@ html {
 /* Final Promo Section */
 .final-promo {
     padding: 100px 0;
-    background: var(--background-light);
+    background: #F9FAFB;
 }
 
 .promo-content {
@@ -656,15 +731,18 @@ html {
 }
 
 .promo-content h2 {
-    font-size: 36px;
+    font-family: 'Manrope', sans-serif;
+    font-size: 24px;
     font-weight: 700;
     margin-bottom: 16px;
-    color: var(--text-primary);
+    color: #0A214C;
 }
 
 .promo-content p {
-    font-size: 18px;
-    color: var(--text-secondary);
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #0A214C;
     margin-bottom: 32px;
 }
 
@@ -677,7 +755,7 @@ html {
 }
 
 .mockup {
-    max-width: 300px;
+    max-width: 800px;
     height: auto;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow-lg);
@@ -700,30 +778,45 @@ html {
     padding: 40px 0;
 }
 
-.footer-content {
+.footer {
+    background: #11171c;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .footer-content {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-}
-
-.footer-links {
-    display: flex;
     gap: 32px;
-}
-
-.footer-links a {
-    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+  }
+  
+  .footer-links a {
+    color: #98A2B3;
     text-decoration: none;
-    transition: var(--transition);
-}
-
-.footer-links a:hover {
-    color: var(--white);
-}
-
-.footer-copyright p {
-    color: rgba(255, 255, 255, 0.6);
-}
+    font-weight: 400;
+    font-size: 14px;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links a:hover {
+    color: #fff;
+  }
+  
+  .footer-copyright p {
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+  }
+  
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -736,7 +829,7 @@ html {
     }
 
     .hero {
-        padding: 150px 0 60px;
+        padding: 150px 0 0px;
     }
 
     .hero-content {
@@ -749,6 +842,7 @@ html {
         font-size: 32px;
         line-height: 1.5;
     }
+   
 
     .hero-buttons {
         flex-direction: column;

@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Observe elements for animation
     const animatedElements = document.querySelectorAll('.solution-card, .service-item, .stat');
     animatedElements.forEach(el => {
-        el.style.opacity = '0';
+        el.style.opacity = '1';
         el.style.transform = 'translateY(30px)';
         el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         observer.observe(el);
@@ -183,7 +183,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     images.forEach(img => {
-        img.style.opacity = '0';
+        img.style.opacity = '1';
         img.style.transition = 'opacity 0.3s ease';
         imageObserver.observe(img);
     });
