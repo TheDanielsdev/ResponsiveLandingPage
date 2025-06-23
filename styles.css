@@ -51,6 +51,11 @@ body {
     height: 70px;
 }
 
+.nav {
+    margin-left: auto;
+    margin-right: 20px;
+}
+
 .logo {
     font-size: 24px;
     font-weight: 700;
@@ -68,10 +73,23 @@ body {
     color: var(--text-primary);
     font-weight: 500;
     transition: var(--transition);
+    position: relative;
+    padding-bottom: 5px;
 }
 
-.nav-list a:hover {
+.nav-list a:hover,
+.nav-list a.active {
     color: var(--primary-color);
+}
+
+.nav-list a.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--primary-color);
 }
 
 .contact-btn {
@@ -151,11 +169,25 @@ body {
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 24px;
-    color: var(--text-primary);
+    color: #183B56;
+    position: relative;
+}
+
+.hero-text h1::after {
+    content: '';
+    position: absolute;
+    bottom: 15px;
+    right: 85px;
+    width: 60px;
+    height: 20px;
+    background-image: url('img/golden-accent.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
 }
 
 .text-highlight {
-    color: var(--primary-color);
+    color: #183B56;
 }
 
 .hero-text p {
@@ -242,13 +274,13 @@ body {
 }
 
 .floating-card.top-left {
-    top: 20px;
-    left: -20px;
+    top: 60px;
+    left: -40px;
 }
 
 .floating-card.bottom-right {
-    bottom: 30px;
-    right: -30px;
+    bottom: 60px;
+    right: -40px;
 }
 
 .floating-card .star,
@@ -320,17 +352,6 @@ body {
     gap: 32px;
 }
 
-.service-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 16px;
-}
-
-.service-icon {
-    font-size: 24px;
-    margin-top: 4px;
-}
-
 .service-item h3 {
     font-size: 20px;
     font-weight: 600;
@@ -343,56 +364,10 @@ body {
     line-height: 1.6;
 }
 
-.laptop-container {
-    position: relative;
-    width: 100%;
-}
-
 .image-content img {
     width: 100%;
     height: auto;
     border-radius: var(--border-radius);
-}
-
-.tech-badge {
-    position: absolute;
-    background: var(--primary-color);
-    color: var(--white);
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: 600;
-    animation: float 4s ease-in-out infinite;
-}
-
-.badge-1 {
-    top: 20%;
-    left: 10%;
-    animation-delay: 0s;
-}
-
-.badge-2 {
-    top: 15%;
-    right: 15%;
-    animation-delay: 1s;
-}
-
-.badge-3 {
-    top: 60%;
-    left: 5%;
-    animation-delay: 2s;
-}
-
-.badge-4 {
-    bottom: 25%;
-    right: 20%;
-    animation-delay: 3s;
-}
-
-.badge-5 {
-    bottom: 40%;
-    left: 25%;
-    animation-delay: 4s;
 }
 
 /* Solutions Section */
@@ -754,14 +729,7 @@ body {
     }
 
     .service-item {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 8px;
-        text-align: left;
-    }
-
-    .tech-badge {
-        display: none;
+        margin-bottom: 24px;
     }
 
     .solutions {
