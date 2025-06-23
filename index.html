@@ -12,18 +12,18 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <span>LogicBox</span>
+                    <span>LogoHere</span>
                 </div>
                 <nav class="nav">
                     <ul class="nav-list">
                         <li><a href="#home" class="active">Home</a></li>
-                        <li><a href="#about">About</a></li>
+                        <li><a href="#about">About us</a></li>
                         <li><a href="#services">Services</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#blog">Blog</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#portfolio">Book 30min Free Session</a></li>
+                      
                     </ul>
                 </nav>
+               
                 <button class="contact-btn">Contact Us</button>
                 <button class="mobile-menu-btn" id="mobileMenuBtn">
                     <span></span>
@@ -39,11 +39,10 @@
         <nav class="mobile-nav">
             <ul>
                 <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="#about">About us</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#portfolio">Book 30min Free Session</a></li>
+              
             </ul>
             <button class="contact-btn">Contact Us</button>
         </nav>
@@ -55,27 +54,58 @@
             <div class="container">
                 <div class="hero-content">
                     <div class="hero-text">
-                        <h1>Building Dynamic<br>Digital Experiences.</h1>
+                        <h1>
+                            Building Dyna<span class="highlight">mic</span><br>
+                            Digital Experiences.
+                          </h1>
+<style>
+  .highlight {
+  background-color: #F5CD8A;
+  padding: 2px 6px;
+  display: inline-block;
+  line-height: 1;
+  border-radius: 3px;
+}
+
+
+</style>                          
                         <p>We help companies design stunning digital experiences that engage customers and grow businesses.</p>
                         <div class="hero-buttons">
-                            <button class="btn btn-primary">Book a 30-min free session</button>
-                            <button class="btn btn-secondary">Contact Us</button>
+                            <button class="btn btn-primary" style="color: white; font-weight: 400; font-size: 14px;">Book a 30-min free session</button>
+                            <button class="btn btn-secondary" style="color: #0A214C; font-weight: 400; font-size: 14px;">Contact Us</button>
                         </div>
                     </div>
                     <div class="hero-image">
                         <div class="hero-background-blob"></div>
                         <img src="img/hero-woman.png" alt="Professional woman with tablet">
                         <div class="floating-card top-left">
-                            <span class="star">⭐</span>
-                            <div>
-                                <div class="card-title">20k+ Customer Review</div>
-                            </div>
+                            <div class="review-card">
+                                <img src="avatar-placeholder.jpg" alt="Reviewer" class="avatar">
+                                <div class="review-content">
+                                  <div class="stars">
+                                    ⭐⭐⭐⭐⭐
+                                  </div>
+                                  <p class="card-title">20k+ Customer Review</p>
+                                </div>
+                              </div>
+                              
                         </div>
                         <div class="floating-card bottom-right">
-                            <span class="check">✅</span>
-                            <div>
-                                <div class="card-title">Project Done: 3,268</div>
-                            </div>
+                            <div class="review-card">
+                               
+                                <div class="review-content">
+                                  <div class="stars">
+                                    <p class="card-title">Project Done</p>
+                                    
+                                  </div>
+                               
+                                  <p class="card-title">3,268</p>
+                                 
+                                </div>
+                                
+                              </div>
+                              
+                           
                         </div>
                     </div>
                 </div>
@@ -84,23 +114,39 @@
 
         <!-- Statistics Bar -->
         <section class="stats-bar">
-            <div class="container">
-                <div class="stats-content">
-                    <div class="stat">
-                        <div class="stat-number">10K+</div>
-                        <div class="stat-label">Completed Projects</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-number">100%</div>
-                        <div class="stat-label">Client Satisfaction</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-number">10YRS</div>
-                        <div class="stat-label">Industry Experience</div>
-                    </div>
+            <div class="container stats-container">
+              <div class="trusted-by">
+                <p>Trusted by our customers</p>
+                <div class="avatars">
+                  <img src="img/avatar1.png" alt="Customer 1" />
+                  <img src="img/avatar2.png" alt="Customer 2" />
+                  <img src="img/avatar3.png" alt="Customer 3" />
                 </div>
+              </div>
+          
+              <div class="stats-content">
+                <div class="stat">
+                  <div class="stat-number">10k+</div>
+                  <div class="stat-label">Completed Projects</div>
+                </div>
+          
+                <div class="stat-divider"></div>
+          
+                <div class="stat">
+                  <div class="stat-number">100%</div>
+                  <div class="stat-label">Client Satisfaction</div>
+                </div>
+          
+                <div class="stat-divider"></div>
+          
+                <div class="stat">
+                  <div class="stat-number">10yrs</div>
+                  <div class="stat-label">Industry Experience</div>
+                </div>
+              </div>
             </div>
-        </section>
+          </section>
+          
 
         <!-- What We Do Section -->
         <section class="what-we-do" id="services">
@@ -128,7 +174,7 @@
                         </div>
                     </div>
                     <div class="image-content">
-                        <img src="img/developer-working.svg" alt="Developer working on laptop">
+                        <img src="img/2150040428 1.png" alt="Developer working on laptop">
                     </div>
                 </div>
             </div>
@@ -137,39 +183,64 @@
         <!-- Solutions Grid -->
         <section class="solutions">
             <div class="container">
-                <h2>Solutions We Provide For You</h2>
-                <div class="solutions-grid">
-                    <div class="solution-card">
-                        <div class="card-icon">
-                            <img src="img/web-development-icon.svg" alt="Web Development">
-                        </div>
-                        <h3>Web Development</h3>
-                        <p>Custom web development solutions that drive business growth and user engagement.</p>
+              <h2>Solutions We Provide For You</h2>
+              <p class="subheading">
+                HDS Serves mid-size to enterprise-level clients in sectors such as<br />
+                financial services, energy, healthcare and government
+              </p>
+          
+              <div class="solutions-grid">
+                <div class="solution-card">
+                  <div class="card-content">
+                    <div class="card-icon">
+                      <img src="img/Frame 19.png" alt="Web Development">
                     </div>
-                    <div class="solution-card">
-                        <div class="card-icon">
-                            <img src="img/mobile-app-icon.svg" alt="Mobile App Development">
-                        </div>
-                        <h3>Mobile App Development</h3>
-                        <p>Native and hybrid mobile applications that deliver seamless user experiences.</p>
+                    <div>
+                      <h3>Custom Software Development</h3>
+                      <p style="color: #667085;">Scalable web & mobile solutions built on modern tech stacks.</p>
                     </div>
-                    <div class="solution-card">
-                        <div class="card-icon">
-                            <img src="img/ui-ux-icon.svg" alt="UI/UX Design">
-                        </div>
-                        <h3>UI/UX Design</h3>
-                        <p>User-centered design solutions that enhance usability and drive conversions.</p>
-                    </div>
-                    <div class="solution-card">
-                        <div class="card-icon">
-                            <img src="img/digital-marketing-icon.svg" alt="Digital Marketing">
-                        </div>
-                        <h3>Digital Marketing</h3>
-                        <p>Comprehensive digital marketing strategies that boost your online presence.</p>
-                    </div>
+                  </div>
                 </div>
+          
+                <div class="solution-card">
+                  <div class="card-content">
+                    <div class="card-icon">
+                      <img src="img/Frame 19 (1).png" alt="Cloud DevOps">
+                    </div>
+                    <div>
+                      <h3>Cloud & DevOps</h3>
+                      <p style="color: #667085;">Infrastructure as code, CI/CD pipelines, cloud optimization on AWS, Azure & GCP</p>
+                    </div>
+                  </div>
+                </div>
+          
+                <div class="solution-card">
+                  <div class="card-content">
+                    <div class="card-icon">
+                      <img src="img/Frame 19 (2).png" alt="QA & Automation">
+                    </div>
+                    <div>
+                      <h3>Quality Assurance & Automation</h3>
+                      <p style="color: #667085;">Manual and automated testing for bulletproof applications</p>
+                    </div>
+                  </div>
+                </div>
+          
+                <div class="solution-card">
+                  <div class="card-content">
+                    <div class="card-icon">
+                      <img src="img/Frame 19 (3).png" alt="Remote Teams">
+                    </div>
+                    <div>
+                      <h3>Dedicated Remote Teams</h3>
+                      <p style="color: #667085;">Expand your team with vetted Nigerian developers. Fast, Flexible and Affordable.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-        </section>
+          </section>
+          
 
         <!-- Portfolio Section -->
         <section class="portfolio" id="portfolio">
