@@ -1208,6 +1208,16 @@ html {
     display: block;
 }
 
+.mobile-menu-overlay a{
+    font-size: 14px;
+    font-weight: 400;
+color: #667085;
+}
+
+.mobile-menu-overlay button{
+   margin-left:20px ;
+}
+
 /* Smooth scroll */
 html {
     scroll-behavior: smooth;
