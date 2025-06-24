@@ -1,5 +1,7 @@
 // Mobile menu functionality
 document.addEventListener('DOMContentLoaded', function() {
+
+    
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
     const body = document.body;
@@ -28,63 +30,63 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Portfolio carousel functionality
-    const carouselTrack = document.getElementById('carouselTrack');
-    const dots = document.querySelectorAll('.dot');
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
-    let currentSlide = 0;
-    const totalSlides = dots.length;
-    const cardWidth = 33.333; // Each card takes 1/3 of the container
+    // const carouselTrack = document.getElementById('carouselTrack');
+    // const dots = document.querySelectorAll('.dot');
+    // const prevBtn = document.getElementById('prevBtn');
+    // const nextBtn = document.getElementById('nextBtn');
+    // let currentSlide = 0;
+    // const totalSlides = dots.length;
+    // const cardWidth = 33.333; // Each card takes 1/3 of the container
 
-    // Function to update carousel
-    function updateCarousel(slideIndex) {
-        const translateX = slideIndex * -cardWidth;
-        carouselTrack.style.transform = `translateX(${translateX}%)`;
+    // // Function to update carousel
+    // function updateCarousel(slideIndex) {
+    //     const translateX = slideIndex * -cardWidth;
+    //     carouselTrack.style.transform = `translateX(${translateX}%)`;
         
-        // Update active dot
-        dots.forEach((dot, index) => {
-            dot.classList.toggle('active', index === slideIndex);
-        });
+    //     // Update active dot
+    //     dots.forEach((dot, index) => {
+    //         dot.classList.toggle('active', index === slideIndex);
+    //     });
         
-        currentSlide = slideIndex;
-    }
+    //     currentSlide = slideIndex;
+    // }
 
-    // Add click event to dots
-    dots.forEach((dot, index) => {
-        dot.addEventListener('click', function() {
-            updateCarousel(index);
-        });
-    });
+    // // Add click event to dots
+    // dots.forEach((dot, index) => {
+    //     dot.addEventListener('click', function() {
+    //         updateCarousel(index);
+    //     });
+    // });
 
-    // Add click events to navigation buttons
-    prevBtn.addEventListener('click', function() {
-        currentSlide = currentSlide > 0 ? currentSlide - 1 : totalSlides - 1;
-        updateCarousel(currentSlide);
-    });
+    // // Add click events to navigation buttons
+    // prevBtn.addEventListener('click', function() {
+    //     currentSlide = currentSlide > 0 ? currentSlide - 1 : totalSlides - 1;
+    //     updateCarousel(currentSlide);
+    // });
 
-    nextBtn.addEventListener('click', function() {
-        currentSlide = (currentSlide + 1) % totalSlides;
-        updateCarousel(currentSlide);
-    });
+    // nextBtn.addEventListener('click', function() {
+    //     currentSlide = (currentSlide + 1) % totalSlides;
+    //     updateCarousel(currentSlide);
+    // });
 
-    // Auto-play carousel
-    function autoPlayCarousel() {
-        currentSlide = (currentSlide + 1) % totalSlides;
-        updateCarousel(currentSlide);
-    }
+    // // Auto-play carousel
+    // function autoPlayCarousel() {
+    //     currentSlide = (currentSlide + 1) % totalSlides;
+    //     updateCarousel(currentSlide);
+    // }
 
-    // Start auto-play
-    let carouselInterval = setInterval(autoPlayCarousel, 5000);
+    // // Start auto-play
+    // let carouselInterval = setInterval(autoPlayCarousel, 5000);
 
-    // Pause auto-play on hover
-    const portfolioSection = document.querySelector('.portfolio-carousel');
-    portfolioSection.addEventListener('mouseenter', function() {
-        clearInterval(carouselInterval);
-    });
+    // // Pause auto-play on hover
+    // const portfolioSection = document.querySelector('.portfolio-carousel');
+    // portfolioSection.addEventListener('mouseenter', function() {
+    //     clearInterval(carouselInterval);
+    // });
 
-    portfolioSection.addEventListener('mouseleave', function() {
-        carouselInterval = setInterval(autoPlayCarousel, 5000);
-    });
+    // portfolioSection.addEventListener('mouseleave', function() {
+    //     carouselInterval = setInterval(autoPlayCarousel, 5000);
+    // });
 
     // Smooth scrolling for navigation links
     const navLinks = document.querySelectorAll('a[href^="#"]');
@@ -153,20 +155,21 @@ document.addEventListener('DOMContentLoaded', function() {
         return emailRegex.test(email);
     }
 
+    //!
     // Contact button functionality
-    const contactBtns = document.querySelectorAll('.contact-btn');
-    contactBtns.forEach(btn => {
-        btn.addEventListener('click', function() {
-            // Scroll to contact section or show contact modal
-            const contactSection = document.querySelector('#contact');
-            if (contactSection) {
-                contactSection.scrollIntoView({ behavior: 'smooth' });
-            } else {
-                // Simple alert for demo - replace with actual contact functionality
-                alert('Contact form coming soon! Please email us at hello@logicbox.com');
-            }
-        });
-    });
+    // const contactBtns = document.querySelectorAll('.contact-btn');
+    // contactBtns.forEach(btn => {
+    //     btn.addEventListener('click', function() {
+    //         // Scroll to contact section or show contact modal
+    //         const contactSection = document.querySelector('#contact');
+    //         if (contactSection) {
+    //             contactSection.scrollIntoView({ behavior: 'smooth' });
+    //         } else {
+    //             // Simple alert for demo - replace with actual contact functionality
+    //             alert('Contact form coming soon! Please email us at hello@logicbox.com');
+    //         }
+    //     });
+    // });
 
     // Performance optimization: Lazy loading for images
     const images = document.querySelectorAll('img[src]');
@@ -246,4 +249,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initialize any additional components
     console.log('LogicBox website initialized successfully');
+
+    
 });
