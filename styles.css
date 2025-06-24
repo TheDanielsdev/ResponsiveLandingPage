@@ -832,7 +832,12 @@ html {
 
     }
 
-    
+    .carousel-btn.prev {
+   display: none;
+    }
+    .carousel-btn.next {
+        display: none;
+         }
 
     
     .portfolio-card {
