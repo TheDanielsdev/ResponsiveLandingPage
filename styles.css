@@ -484,14 +484,14 @@ html {
 .section-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 80px;
+    gap: 200px;
     align-items: center;
 }
 
 .text-content h2 {
     font-size: 24px;
     font-weight: 700;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     color: #151B1F;
 }
 
@@ -504,7 +504,7 @@ html {
 .service-item h3 {
     font-size: 18px;
     font-weight: 500;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     color: #151B1F;
 }
 
@@ -519,7 +519,7 @@ html {
     width: 100%;
     height: auto;
     border-radius: var(--border-radius);
-    /* transform: translateY(-100px); shift up by 20px */
+    transform: translateY(-10px);
   }
   
 

@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <span>LogoHere</span>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#about" class="active">About us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#">Book 30min Free Session</a></li>
+                      
+                    </ul>
+                </nav>
+                
+               
+                <button class="contact-btn contact-btn-main">Contact Us</button>
+                <img src="img/Frame 1000008572.png" class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#">Book 30min Free Session</a></li>
+              
+            </ul>
+            <button class="contact-btn">Contact Us</button>
+        </nav>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+      
+        
+          <div class="overlay">
+            <h1>Empowering Businesses Through Technology</h1>
+          </div>
+        </section>
+        
+        
+        <style>
+          .hero {
+            position: relative;
+            background:  
+            linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)) 
+, url('img/392088461_d166a69c-6c55-427c-8c91-529d92e1e1a6 1.png'); 
+            background-size: cover;
+            background-position: center;
+            height: 655px; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+          }
+
+          .overlay {
+            color: white;
+            padding: 0 20px;
+            max-width: 800px;
+          }
+
+          .overlay h1 {
+            font-size: 20px;
+            font-weight: 500;
+            font-style: italic;
+            margin-top: 150px;
+          }
+
+         
+          @media (min-width: 768px) {
+            .overlay h1 {
+              font-size: 20px;
+            }
+          }
+
+
+        </style>        
+
+        <!-- About -->
+        <section class="about">
+          <div class="about-content">
+            <h2>About Us</h2>
+            <p>
+              At Heritage Dynamic Solution, we build innovative web <br> and software solutions that help companies grow, <br> operate efficiently, and connect better with their users.
+            </p>
+          </div>
+        </section>
+        <style>
+          .about {
+              display: flex;
+              justify-content: center;  
+              align-items: center;     
+              height: 359px;           
+              padding: 0px 20px;      
+              text-align: center;
+              background-color:white; 
+            }
+
+            .about-content {
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;  /* ensures column items (h2, p) are centered */
+              max-width: 800px;
+              text-align: left;
+            }
+
+            .about h2 {
+              font-size: 24px;
+              font-family: 'Manrope', sans-serif;
+              font-weight: 700;
+              margin-bottom: 20px;
+              color: #151B1F
+            }
+
+            .about p {
+              font-size: 16px;
+              color: #667085;
+              font-weight: 400;
+
+              max-width: 600px;
+              margin: 0;
+            }
+
+        </style>
+        <!-- About us ends -->
+
+        <!-- WHo we are -->
+        <section class="what-we-do1" id="about">
+          <div class="container">
+              <div class="section-content">
+                  <div class="text-content1">
+                      <h2>Who We Are</h2>
+                      <div class="services-list">
+                          <div class="service-item1">
+                              <h3>Driven by Passion. Backed by Expertise.</h3>
+                              <p>We are a team of designers, developers, and strategists committed to building scalable digital products. Whether you're a startup or an enterprise, we partner with you to solve real-world problems using modern technology.</p>
+                          </div>
+                       
+                      </div>
+                  </div>
+                  <div class="image-content">
+                      <img src="img/41852 1.png" alt="Developer working on laptop">
+                  </div>
+              </div>
+          </div>
+      </section>
+      <style>
+        .what-we-do1 {
+          padding: 80px 0;
+          background-color: #F9FAFB;
+          height: 637px;
+        }
+        .text-content1 h2 {
+          font-family: 'Manrope', sans-serif;
+          font-size: 24px;
+          font-weight: 700;
+          color: #151B1F;
+          margin-bottom: 5px;
+        }
+        .service-item1 h3 {
+          font-size: 18px;
+          font-style: italic;
+          font-weight: 500;
+          margin-bottom: 5px;
+          color: #151B1F;
+        }
+        .service-item1 p {
+          color: #667085;
+          font-size: 16px;
+          font-weight: 400;
+        }
+      </style>
+
+        <!-- Who we are -->
+
+       <!-- Our mission -->
+       <section class="what-we-do2" id="about">
+        <div class="container">
+            <div class="section-content">
+              <div class="image-content">
+                <img src="img/33 1.png" alt="Developer working on laptop">
+            </div>
+                <div class="text-content2">
+                    <h2>Our Mission & Vision</h2>
+                    <br>
+                    <div class="services-list">
+                        <div class="service-item2">
+                            <h3>Mission:</h3>
+                            <p>To deliver smart, user-focused digital solutions <br> that drive real business results.</p>
+                        </div>
+                     
+                    </div>
+                    <br>
+                    <div class="services-list">
+                      <div class="service-item2">
+                          <h3>Vision:</h3>
+                          <p>To be a leading technology partner recognized for <br> innovation, reliability, and long-term impact.</p>
+                      </div>
+                   
+                  </div>
+                </div>
+                
+               
+            </div>
+        </div>
+    </section>
+    <style>
+
+      .what-we-do2 {
+        padding: 80px 0;
+        background-color: white;
+        height: 637px;
+      }
+      .text-content2 h2 {
+        font-family: 'Manrope', sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        color: #151B1F;
+      }
+      .service-item2 h3 {
+        font-size: 16px;
+        
+        font-weight: 500;
+        color: #151B1F;
+      }
+      .service-item2 p {
+        color: #667085;
+        font-size: 14px;
+        font-weight: 400;
+      }
+    </style>
+       <!-- Our mission -->
+
+        <!-- What We Do Section -->
+        <section class="what-we-do" id="about">
+            <div class="container">
+                <div class="section-content">
+                    <div class="text-content">
+                        <h2>What We Do</h2>
+                        <div class="services-list">
+                            <div class="service-item">
+                                <h3>Web Development</h3>
+                                <p>Creating responsive and dynamic websites that deliver exceptional user experiences.</p>
+                            </div>
+                            <div class="service-item">
+                                <h3>Mobile Apps</h3>
+                                <p>Building native and cross-platform mobile applications for iOS and Android.</p>
+                            </div>
+                            <div class="service-item">
+                                <h3>UI/UX Design</h3>
+                                <p>Designing intuitive and beautiful user interfaces that users love to interact with.</p>
+                            </div>
+                            <div class="service-item">
+                                <h3>Brand Strategy</h3>
+                                <p>Developing comprehensive brand strategies that resonate with your target audience.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="image-content">
+                        <img src="img/2150040428 1.png" alt="Developer working on laptop">
+                    </div>
+                </div>
+            </div>
+            <style>
+                .what-we-do {
+          
+          background-color: #F9FAFB;
+        
+        }
+            </style>
+        </section>
+
+        <!-- Solutions Grid -->
+        <section class="solutions" id="services">
+            <div class="container">
+              <h2>Let’s Build Something Great Together</h2>
+              <div class="hero-buttons">
+                <button class="btn btn-primary" style="color: white; font-weight: 400; font-size: 14px;">Book a 30-min free session</button>
+                <button class="btn btn-secondary" style="color: #0A214C; font-weight: 400; font-size: 14px;">Get a Free Quote</button>
+            </div>
+          
+            
+            </div>
+        
+            <style>
+              .solutions {
+                  /* padding: 100px 0; */
+                  background: white; 
+                  text-align: center;
+                  height: 359px;
+                }
+               .hero-buttons {
+                  display: flex;
+                  gap: 16px;
+                  margin-bottom: 40px;
+                  justify-content: center;
+              }
+            </style>
+          </section>
+          
+
+
+
+
+     
+       
+ 
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#about">About us</a>
+            <a href="#services">Services</a>
+            <a href="#booking">Book 30min Free Session</a>
+            <a href="#contact">Contact Us</a>
+          </div>
+          <div class="footer-copyright">
+            <p>&copy; 2025 – All Right Reserved</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
