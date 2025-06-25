@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <span>LogoHere</span>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#">Book 30min Free Session</a></li>
+                      
+                    </ul>
+                </nav>
+                
+               
+                <button class="contact-btn contact-btn-main">Contact Us</button>
+                <img src="img/Frame 1000008572.png" class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#">Book 30min Free Session</a></li>
+              
+            </ul>
+            <button class="contact-btn">Contact Us</button>
+        </nav>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+      
+        
+          <div class="overlay">
+            <h1>Get in Touch With Us</h1>
+          </div>
+        </section>
+        
+        
+        <style>
+          .hero {
+            position: relative;
+            background:  
+            linear-gradient( #1B5CD100, #0E2F6B) 
+, url('img/97317 1.png'); 
+            background-size: cover;
+            background-position: top center;
+            height: 655px; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+          }
+
+          .overlay {
+            color: white;
+            padding: 0 20px;
+            max-width: 800px;
+          }
+
+          .overlay h1 {
+            font-size: 20px;
+            font-weight: 500;
+            font-style: italic;
+            margin-top: 290px;
+          }
+
+         
+          @media (min-width: 768px) {
+            .overlay h1 {
+              font-size: 20px;
+            }
+          }
+
+
+        </style>   
+        
+    <!-- Hero Ends  -->
+
+     <!-- Book session -->
+     <section class="book-session">
+        <div class="book-left">
+            <p>
+                We help businesses and individuals create marketing strategies and assets 
+                that address their audience's pain points
+            </p>
+        </div>
+        <div class="book-right">
+            <button class="btn btn-primary" style="color: white; font-weight: 400; font-size: 14px;">Book a 30-min free session</button>
+
+        </div>
+    </section>
+
+     <style>
+     .book-session {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 40px;
+        padding: 60px 80px;
+        background: #151B1F;
+        width: 100%;
+      
+    }
+
+    .book-left {
+        flex: 1;
+        max-width: 500px;
+    }
+
+    .book-left p {
+        font-size: 14px;
+        line-height: 1.6;
+        font-weight: 400;
+        color: #ffffff;
+        margin: 0;
+    }
+
+    .book-right {
+        flex: 0 0 auto;
+    }
+
+
+
+    /* Mobile styles */
+    @media (max-width: 768px) {
+        .book-session {
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+            padding: 40px 30px;
+         
+            height: 291px;
+        }
+
+        .book-left {
+            max-width: 100%;
+        }
+
+        .book-left p {
+            font-size: 16px;
+        }
+
+        .book-right {
+            width: 100%;
+        }
+
+        .btn {
+            width: 240px;
+            padding: 18px 24px;
+            font-size: 16px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .book-session {
+            padding: 80px 20px;
+           
+        }
+
+        .book-left p {
+            font-size: 15px;
+            line-height: 1.5;
+        }
+    }
+</style>
+    <!-- Book session ends -->
+
+    <!-- Contact  -->
+    <section class="contact-section">
+        <div class="contact-container">
+          <h2>Get in touch with us</h2>
+          <p class="subtitle">Fill the form below with your details to contact us</p>
+      
+          <form class="contact-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label>First Name</label>
+                <input type="text" placeholder="e.g John">
+              </div>
+              <div class="form-group">
+                <label>Last Name</label>
+                <input type="text" placeholder="e.g Doe">
+              </div>
+            </div>
+      
+            <div class="form-row">
+              <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" placeholder="e.g johndoe@mail.com">
+              </div>
+              <div class="form-group">
+                <label>Email Address</label>
+                <input type="text" placeholder="e.g +1 934585621">
+              </div>
+            </div>
+      
+            <div class="form-group full-width">
+              <label>Message</label>
+              <textarea placeholder="Request Brief"></textarea>
+            </div>
+      
+            <div class="form-submit">
+              <button type="submit">Submit Details</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <style>
+        .contact-section {
+  background: #F9FAFB;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-container {
+  background: white;
+  border-radius: 24px;
+  padding: 40px;
+  max-width: 900px;
+  width: 100%;
+  text-align: center;
+}
+
+.contact-container h2 {
+    font-family: 'Manrope', sans-serif;
+  color: #0A214C;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.contact-container .subtitle {
+  color: #98A2B3;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.form-group label {
+  font-weight: 400;
+  font-size: 14px;
+  color: #0A214C;
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  font-size: 14px;
+  outline: none;
+}
+input::placeholder,
+textarea::placeholder {
+  color: #667085;     
+  font-size: 14px;
+  font-weight: 400;
+  font-family: inherit; 
+}
+
+.form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.form-submit {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.form-submit button {
+  padding: 14px 30px;
+  background-color: #0a2c66;
+  color: white;
+  font-weight: 500;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    background: transparent;
+    border-radius: 0;
+    padding: 20px;
+  }
+}
+
+      </style>
+      <!-- Contact section ends -->
+
+
+
+     
+       
+ 
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#about">About us</a>
+            <a href="#services">Services</a>
+            <a href="#booking">Book 30min Free Session</a>
+            <a href="#contact">Contact Us</a>
+          </div>
+          <div class="footer-copyright">
+            <p>&copy; 2025 – All Right Reserved</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
