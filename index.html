@@ -114,36 +114,38 @@
 
 
         
-          @media (max-width: 768px) {
-            .stats-bar {
-    position: relative;
-    z-index: 1;
-    padding-top: 60px;
-   
+@media (max-width: 768px) {
+              .stats-bar {
+      position: relative;
+      z-index: 1;
+      padding-top: 60px;
+     
+    }
+    .stats-container {
+      flex-direction: column;
+      align-items: stretch;
+      text-align: start;
+    }
+  
+    .trusted-by {
+      align-items: start;
+    }
+  
+    .avatars {
+      justify-content: start;
+    }
+  
+    .stats-content {
+      flex-direction: column;
+      gap: 20px;
+      justify-content: start;
+      align-items: flex-start;
+    }
+  
+    .stat-divider {
+      display: none;
+    }
   }
-  .stats-container {
-    flex-direction: column;
-    align-items: stretch;
-    text-align: center;
-  }
-
-  .trusted-by {
-    align-items: center;
-  }
-
-  .avatars {
-    justify-content: center;
-  }
-
-  .stats-content {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .stat-divider {
-    display: none;
-  }
-}
         </style>
         <section class="stats-bar">
             <div class="container stats-container">
