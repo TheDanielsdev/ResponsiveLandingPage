@@ -588,7 +588,7 @@
                 margin-bottom: 2rem;
                 justify-content: flex-start;
                 overflow-x: auto;
-                padding: 0 1rem;
+                padding: 20px 1rem;
                 margin-left: -1rem;
                 margin-right: -1rem;
                 flex-wrap: nowrap;
@@ -612,8 +612,14 @@
             }
 
             .overlay-title {
-                font-size: 1.2rem;
-            }
+  font-size: 1.2rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: left;
+  width: 100%;
+}
+
 
             .device-mockup {
                 width: 90%;
@@ -629,7 +635,7 @@
             }
 
             .desktop-mockup {
-                width: 60%;
+                width: 100%;
             }
 
             .laptop-mockup {
