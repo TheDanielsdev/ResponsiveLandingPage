@@ -1,0 +1,107 @@
+    
+@media (max-width: 768px) {
+    .stats-bar {
+position: relative;
+z-index: 1;
+padding-top: 60px;
+
+}
+.stats-container {
+flex-direction: column;
+align-items: stretch;
+text-align: start;
+}
+
+.trusted-by {
+align-items: start;
+}
+
+.avatars {
+justify-content: start;
+}
+
+.stats-content {
+flex-direction: column;
+gap: 20px;
+justify-content: start;
+align-items: flex-start;
+}
+
+.stat-divider {
+display: none;
+}
+}
+
+     
+.portfolio-header {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+  }
+  
+  .portfolio-header-left,
+  .portfolio-header-right {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  
+  .btn-port {
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+  }
+  
+  .portfolio-header-left h2 {
+    font-size: 30px;
+    font-weight: 800;
+    color: white;
+    line-height: 1.3;
+    margin: 0;
+  }
+  
+  .portfolio-header-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* aligns button to right */
+    text-align: left;
+    color: rgba(255, 255, 255, 0.85);
+  }
+  
+  .portfolio-header-right p {
+    font-size: 18px;
+    margin: 0 0 20px;
+  font-weight: 700;
+    line-height: 1.5;
+    max-width: 500px;
+  }
+  
+  
+  
+  
+  
+  
+  /* Mobile-only fixes - no impact on desktop */
+  @media (max-width: 768px) {
+      .carousel-track {
+          display: flex !important;
+          flex-direction: row !important;
+      }
+      
+      /* .portfolio-card {
+          min-width: 280px !important;
+          flex-shrink: 0 !important;
+         
+      }
+  }
+  
+  @media (max-width: 480px) {
+      .portfolio-card {
+          min-width: 260px !important;
+          flex-shrink: 0 !important;
+      } */
+  }
+  
