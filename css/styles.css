@@ -178,14 +178,19 @@ html {
 
 /* Hero Section */
 .hero {
-    padding: 170px 0 0px;
+    padding: 170px 0 0;
     background:white
 }
+.hero-content > div:last-child {
+    padding-right: 110px;
+  }
+
 
 
 .hero-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 60% 40%;
+
     gap: 60px;
     align-items: center;
 }
@@ -233,6 +238,8 @@ html {
     font-weight: 400;
     line-height: 1.5;
 }
+
+
 
 .hero-buttons {
     display: flex;
@@ -291,13 +298,29 @@ html {
 }
 
 .hero-image img {
-    width: 500px;
-    height: auto;
-    
+    width: 684px;
+    height: 698px;
+   
     position: relative;
     z-index: 2;
     border-radius: var(--border-radius);
 }
+
+@media (max-width: 768px) {
+    .hero-content > div:last-child {
+        padding-right: 0px;
+      }
+
+      .hero-image img {
+        width: 350px;
+        height: 300px;
+       
+        position: relative;
+        z-index: 2;
+        border-radius: var(--border-radius);
+    }
+  }
+  
 
 .floating-card {
     position: absolute;
