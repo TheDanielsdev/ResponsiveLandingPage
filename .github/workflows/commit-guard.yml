@@ -19,13 +19,18 @@ jobs:
 
       - name: Install gitleaks
         run: |
-          curl -sSfL https://github.com/gitleaks/gitleaks/releases/latest/download/gitleaks_8.18.4_linux_x64.tar.gz -o gitleaks.tar.gz
+          URL=$(curl -s https://api.github.com/repos/gitleaks/gitleaks/releases/latest \
+            | grep "browser_download_url.*linux_x64.tar.gz\"" \
+            | cut -d '"' -f4)
+          curl -sSfL "$URL" -o gitleaks.tar.gz
           tar -xzf gitleaks.tar.gz gitleaks
           sudo mv gitleaks /usr/local/bin/
-
       - name: Install osv-scanner
         run: |
-          curl -sSfL https://github.com/google/osv-scanner/releases/latest/download/osv-scanner_linux_amd64 -o osv-scanner
+          URL=$(curl -s https://api.github.com/repos/google/osv-scanner/releases/latest \
+            | grep "browser_download_url.*osv-scanner_.*_linux_amd64\"" \
+            | cut -d '"' -f4)
+          curl -sSfL "$URL" -o osv-scanner
           chmod +x osv-scanner
           sudo mv osv-scanner /usr/local/bin/
 
